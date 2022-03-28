@@ -30,15 +30,15 @@ app.get ('/books', getBooks);
 async function getBooks(req, res, next){
   try{
     let results = await Book.find();
-    res.status.send(results);
+    res.status(200).send(results);
   } catch(error){
     next(error);
   }
 };
 
-app.use((error, req, res, next)) => {
-  res.status(500).send(error.message);
-};
+// app.use((error, req, res, next)) => {
+//   res.status(500).send(error.message);
+// };
 
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`));

@@ -1,9 +1,9 @@
 'use strict';
 
 require('dotenv').config();
-const mongoose = requre('mongoose');
-
+const mongoose = require('mongoose');
 const Book = require('./models/book');
+mongoose.connect(process.env.DB_URL);
 
 async function seed() {
   // title: {type: String, require: true},
@@ -31,5 +31,7 @@ async function seed() {
     email: 'colegibbs0@gmail.com'
   });
 
+  mongoose.disconnect();
 }
 
+seed();

@@ -27,7 +27,7 @@ async function seed() {
   await Book.create({
     title: 'The Hobit',
     description: 'A fictional fairy tale story.',
-    status: true,
+    status: false,
     email: 'colegibbs0@gmail.com'
   });
 

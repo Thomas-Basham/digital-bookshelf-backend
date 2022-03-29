@@ -59,7 +59,6 @@ Finish time: **:00**
 
 Actual time needed to complete: **hrs**
 
-
 Name of feature:**Delete/ Remove a book**
 
 Estimate of time needed to complete:  **2hrs**

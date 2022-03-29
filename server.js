@@ -26,6 +26,9 @@ app.get('/test', (request, response) => {
 
 });
 
+app.get('/', (request, response) => {
+  response.send('Welcome to the city explorer server!');
+});
 
 app.get ('/books', getBooks);
 async function getBooks(req, res, next){

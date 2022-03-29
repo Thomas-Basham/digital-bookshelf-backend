@@ -26,6 +26,7 @@ app.get('/test', (request, response) => {
 
 });
 
+
 app.get ('/books', getBooks);
 async function getBooks(req, res, next){
   try{
@@ -34,7 +35,7 @@ async function getBooks(req, res, next){
   } catch(error){
     next(error);
   }
-};
+}
 
 // app.use((error, req, res, next)) => {
 //   res.status(500).send(error.message);

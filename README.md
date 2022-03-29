@@ -29,25 +29,106 @@ Express, dotenv, cors, mongoose, nodemon, mongodb, javascript,
 
 Name of feature:**Set up Repos**
 
-Estimate of time needed to complete: _1 hr____
+Estimate of time needed to complete: **2hrs**
 
-Start time: **2pm**_
+Start time: **2:00**
 
-Finish time: **230pm**
+Finish time: **2:30**
 
-Actual time needed to complete: _**30mins**
+Actual time needed to complete: **30mins**
 
-Name of feature:**Storage**_______________
+Name of feature:**Storage**
 
-Estimate of time needed to complete: _2 hr____
+Estimate of time needed to complete:  **2hrs**
 
-Start time: **2:30**_
+Start time: **2:30**
 
-Finish time: _____
+Finish time: **4:00**
 
-Actual time needed to complete: _____
+Actual time needed to complete: **1.5hrs**
+
+---------------------------------------------------
+
+Name of feature:**Create/ Add new book**
+
+Estimate of time needed to complete:  **2hrs**
+
+Start time: **2:00**
+
+Finish time: **:00**
+
+Actual time needed to complete: **hrs**
+
+
+Name of feature:**Delete/ Remove a book**
+
+Estimate of time needed to complete:  **2hrs**
+
+Start time: **:00**
+
+Finish time: **:00**
+
+Actual time needed to complete: **hrs**
 
 <!-- See below -->
 
 ## Credit and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+
+### Logicstical
+
+#### What hours will you be available to communicate?
+
+We will communicate an work between 1 and 6 pm. We will meet at night if we are behind.
+
+#### What platform will you use to communicate (ie. Slack, phone …)?
+
+We will use Slack to communicate.
+
+#### How often will you take breaks?
+
+We will take breaks every hour to hour and a half.
+
+#### What is your plan if you start to fall behind?
+
+We will define our priorities and focus on those tasks. We will meet at night if needed.
+
+### Cooperative
+
+#### Make a list of each parson’s strengths
+
+Thomas: organized, timely, and open minded
+Cole: prioritizing, orginization, and communication
+
+#### How can you best utilize these strengths in the development of your application?
+
+We can use these strengths by defining what needs to get done and when in the most efficent way.
+
+#### In what areas do you each want to develop greater strength?
+
+Thomas: Functional Programming
+Cole: Pair Programming
+
+#### Knowing that every person in your team needs to understand the code, how do you plan to approach the day-to-day development?
+
+We will pair program so we will be able to ensure that we both understand what is being coded.
+
+### Conflict Resolution
+
+#### What will your team do if one person is pulling all the weight while the other person is not contributing?
+
+If one person is pulling to much weight, the one doing more will ask for more support and the one not contributing will ask for more responsiblity.
+
+#### What will your team do if one person is taking over the project and not letting the other member contribute?
+
+The person who is contribuing less will tell the other team member that they are unhappy with the amount of work they are doing and would like to have an even split on tasks.
+
+#### How will you approach each other and the challenge of building an application knowing that it is impossible for two people to be at the exact same place in understanding and skill level?
+
+We will be pair programming so hopefully the holes in one partners knowledge will be filled by the others and vica verca.
+
+## Resources
+
+[https://github.com/bashamtg/can-of-books-backend/]
+[https://github.com/colegibbs/can-of-books-frontend]
+[https://trello.com/b/NqrdXmp5]
+[https://can-of-books-backend-cole-tom.herokuapp.com/]

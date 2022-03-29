@@ -5,11 +5,11 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const Book = require('./models/book');
-
-
-
-app.use(cors());
 const mongoose = require('mongoose');
+
+app.use(express.json());
+app.use(cors());
+
 mongoose.connect(process.env.DB_URL);
 
 const db = mongoose.connection;
@@ -21,9 +21,7 @@ db.once('open', function () {
 const PORT = process.env.PORT || 3001;
 
 app.get('/test', (request, response) => {
-
   response.send('test request received');
-
 });
 
 app.get('/', (request, response) => {
@@ -31,6 +29,17 @@ app.get('/', (request, response) => {
 });
 
 app.get ('/books', getBooks);
+app.post ('/books', postBook);
+
+async function postBook (req, res, next){
+  try{
+    let createdBook = await Book.create(req.body);
+    res.status(200).send(createdBook);
+  } catch(error){
+    next(error);
+  }
+}
+
 async function getBooks(req, res, next){
   try{
     let results = await Book.find();
@@ -39,6 +48,7 @@ async function getBooks(req, res, next){
     next(error);
   }
 }
+
 
 // app.use((error, req, res, next)) => {
 //   res.status(500).send(error.message);

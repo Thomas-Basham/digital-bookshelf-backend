@@ -27,7 +27,7 @@ app.get('/test', (request, response) => {
 });
 
 app.get('/', (request, response) => {
-  response.send('Welcome to the city explorer server!');
+  response.send('Welcome to the Can of Books server!');
 });
 
 app.get ('/books', getBooks);

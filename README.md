@@ -55,15 +55,15 @@ Estimate of time needed to complete:  **2hrs**
 
 Start time: **2:00**
 
-Finish time: **:00**
+Finish time: **4:00**
 
-Actual time needed to complete: **hrs**
+Actual time needed to complete: **2hrs**
 
 Name of feature:**Delete/ Remove a book**
 
 Estimate of time needed to complete:  **2hrs**
 
-Start time: **:00**
+Start time: **4:00**
 
 Finish time: **:00**
 

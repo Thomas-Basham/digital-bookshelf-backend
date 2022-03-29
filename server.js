@@ -30,12 +30,22 @@ app.get('/', (request, response) => {
 
 app.get ('/books', getBooks);
 app.post ('/books', postBook);
+app.delete ('/books/:id', deleteBook);
 
 async function postBook (req, res, next){
   try{
     let createdBook = await Book.create(req.body);
     res.status(200).send(createdBook);
   } catch(error){
+    next(error);
+  }
+}
+async function deleteBook (req, res, next){
+  let id = req.params.id;
+  try{
+    await Book.findByIdAndDelete(id);
+    res.send ('book deleted');
+  }catch(error){
     next(error);
   }
 }

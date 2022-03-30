@@ -126,7 +126,7 @@ The person who is contribuing less will tell the other team member that they are
 We will be pair programming so hopefully the holes in one partners knowledge will be filled by the others and vica verca.
 
 ## Resources
-
+[https://prismatic-gaufre-72d962.netlify.app/]
 [https://github.com/bashamtg/can-of-books-backend/]
 [https://github.com/colegibbs/can-of-books-frontend]
 [https://trello.com/b/NqrdXmp5]

@@ -6,6 +6,7 @@ const cors = require('cors');
 const app = express();
 const Book = require('./models/book');
 const mongoose = require('mongoose');
+const getGoogleBooks = require('./modules/googleBooks');
 
 app.use(express.json());
 app.use(cors());
@@ -32,6 +33,8 @@ app.get ('/books', getBooks);
 app.post ('/books', postBook);
 app.delete ('/books/:id', deleteBook);
 app.put ('/books/:id', putBook);
+
+app.get ('/googlebooks', getGoogleBooks);
 
 async function postBook (req, res, next){
   try{

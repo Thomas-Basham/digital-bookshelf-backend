@@ -71,8 +71,8 @@ app.get('/test', (request, response) => {
   response.send('test request received');
 });
 
-app.get("*", (req, res) => {
-  res.status(404).send("No such directory");
+app.get('*', (req, res) => {
+  res.status(404).send('No such directory');
 });
 
 app.use((error, req, res) => {

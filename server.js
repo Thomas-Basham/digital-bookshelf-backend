@@ -6,7 +6,7 @@ const cors = require('cors');
 const app = express();
 const Book = require('./models/book');
 const mongoose = require('mongoose');
-const getGoogleBooks = require('./modules/googleBooks');
+const getGoogleBooks = require('./modules/getGoogleBooks');
 
 app.use(express.json());
 app.use(cors());
@@ -26,40 +26,48 @@ app.put ('/books/:id', putBook);
 
 app.get ('/googlebooks', getGoogleBooks);
 
-async function postBook (req, res, next){
+async function postBook (req, res,){
   try{
     let createdBook = await Book.create(req.body);
     res.status(200).send(createdBook);
   } catch(error){
-    next(error);
+    console.log(error.message);
+    res.status(500).send(error.message);
+
   }
 }
-async function deleteBook (req, res, next){
+async function deleteBook (req, res,){
   let id = req.params.id;
   try{
     await Book.findByIdAndDelete(id);
     res.send ('book deleted');
   }catch(error){
-    next(error);
+    console.log(error.message);
+    res.status(500).send(error.message);
+
   }
 }
 
-async function getBooks(req, res, next){
+async function getBooks(req, res,){
   try{
     let results = await Book.find();
     res.status(200).send(results);
   } catch(error){
-    next(error);
+    console.log(error.message);
+    res.status(500).send(error.message);
+
   }
 }
 
-async function putBook (req, res, next){
+async function putBook (req, res,){
   try{
     let id = req.params.id;
     let updatedBook = await Book.findByIdAndUpdate(id, req.body, {new: true, overwrite: true});
     res.status(200).send(updatedBook);
   }catch(error){
-    next(error);
+    console.log(error.message);
+    res.status(500).send(error.message);
+
   }
 }
 

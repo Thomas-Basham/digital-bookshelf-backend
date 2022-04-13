@@ -19,18 +19,8 @@ db.once('open', function () {
   console.log('Mongoose is connected');
 });
 
-const PORT = process.env.PORT || 3001;
-
-app.get('/test', (request, response) => {
-  response.send('test request received');
-});
-
-app.get('/', (request, response) => {
-  response.send('Welcome to the Can of Books server!');
-});
-
-app.get ('/books', getBooks);
-app.post ('/books', postBook);
+app.get('/books', getBooks);
+app.post('/books', postBook);
 app.delete ('/books/:id', deleteBook);
 app.put ('/books/:id', putBook);
 
@@ -73,10 +63,22 @@ async function putBook (req, res, next){
   }
 }
 
+app.get('/', (request, response) => {
+  response.send('Welcome to the Can of Books server!');
+});
 
-// app.use((error, req, res, next)) => {
-//   res.status(500).send(error.message);
-// };
+app.get('/test', (request, response) => {
+  response.send('test request received');
+});
 
+app.get("*", (req, res) => {
+  res.status(404).send("No such directory");
+});
+
+app.use((error, req, res) => {
+  res.status(500).send(error.message);
+});
+
+const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
